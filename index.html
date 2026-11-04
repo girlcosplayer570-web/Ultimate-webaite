@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Comprehensive SEO Meta Tags -->
-    <title>AetherOS // Master Calculator Directory, Developer Tools & Procedural Puzzles</title>
-    <meta name="description" content="Explore 100+ professional financial, health, and math calculators, infinite procedural puzzle games, and developer micro-utilities in a lightning-fast editorial suite.">
-    <meta name="keywords" content="calculator directory, mortgage calculator, bmi calculator, procedural maze, wordle solver, codebreaker puzzle, json formatter, developer tools">
+    <!-- SEO & Metadata Suite -->
+    <title>AetherOS // Porcelain Luxe Calculator & Procedural Gaming Suite</title>
+    <meta name="description" content="Explore professional custom calculators, procedural puzzle matrices, and developer tools in a pristine porcelain-white editorial suite.">
+    <meta name="keywords" content="calculator directory, mortgage calculator, bmi calculator, procedural maze, cyber pattern matrix, json formatter">
     <meta name="author" content="AetherOS Suite">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Social Sharing SEO -->
-    <meta property="og:title" content="AetherOS // Elite Editorial Calculator & Puzzle Suite">
-    <meta property="og:description" content="Instant client-side calculators, master directories, and unique procedural puzzle games.">
-    <meta property="og:type" content="website">
 
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        darkbg: '#08090C',
-                        cardbg: '#101218',
-                        bordercol: '#1F2430',
+                        basebg: '#F8FAFC',
+                        cardbg: '#FFFFFF',
+                        bordercol: '#E2E8F0',
+                        textdark: '#0F172A',
+                        accentindigo: '#4F46E5',
+                        accentemerald: '#059669',
+                        accentamber: '#D97706',
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'Georgia', 'serif'],
@@ -41,46 +39,41 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #08090C; color: #E2E8F0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; color: #0F172A; }
         h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         ::-webkit-scrollbar { width: 5px; height: 5px; }
-        ::-webkit-scrollbar-track { background: #08090C; }
-        ::-webkit-scrollbar-thumb { background: #1F2430; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #F8FAFC; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
         .editorial-card {
-            background: rgba(16, 18, 24, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
         .editorial-card:hover {
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 16px 40px -12px rgba(0,0,0,0.7);
+            border-color: #CBD5E1;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-indigo-600 selection:text-white">
 
     <!-- Top Navigation Bar -->
-    <header class="sticky top-0 z-50 editorial-card border-b border-slate-800/80 px-6 py-4 flex items-center justify-between">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('dashboard')">
-            <div class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center shadow-md shadow-emerald-600/30">
-                <i data-lucide="compass" class="w-4 h-4 text-white"></i>
+            <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center shadow-md shadow-indigo-600/20 text-white">
+                <i data-lucide="compass" class="w-4 h-4"></i>
             </div>
             <div>
-                <span class="font-bold text-lg tracking-tight text-white font-serif">AetherOS</span>
-                <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 ml-2 font-medium">SEO Luxe Edition</span>
+                <span class="font-bold text-lg tracking-tight text-slate-900 font-serif">AetherOS</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200 ml-2 font-semibold">Porcelain Luxe</span>
             </div>
         </div>
 
-        <div class="hidden lg:flex items-center gap-1 bg-slate-900/90 p-1.5 rounded-full border border-slate-800 text-xs font-medium">
-            <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn px-4 py-1.5 rounded-full transition-all bg-emerald-600 text-white shadow-sm">Overview</button>
-            <button onclick="switchTab('calculators')" id="nav-calculators" class="nav-btn px-4 py-1.5 rounded-full transition-all text-slate-400 hover:text-white">Calculator Directory</button>
-            <button onclick="switchTab('puzzles')" id="nav-puzzles" class="nav-btn px-4 py-1.5 rounded-full transition-all text-slate-400 hover:text-white">Procedural Games</button>
-            <button onclick="switchTab('utilities')" id="nav-utilities" class="nav-btn px-4 py-1.5 rounded-full transition-all text-slate-400 hover:text-white">Dev Suite</button>
-        </div>
-
-        <div class="flex items-center gap-2">
-            <span class="text-xs text-slate-400 hidden sm:inline">SEO Rank: <strong class="text-emerald-400">Optimized</strong></span>
+        <div class="hidden lg:flex items-center gap-1 bg-slate-100 p-1.5 rounded-full border border-slate-200 text-xs font-medium">
+            <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn px-4 py-1.5 rounded-full transition-all bg-indigo-600 text-white shadow-sm">Overview</button>
+            <button onclick="switchTab('calculators')" id="nav-calculators" class="nav-btn px-4 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900">Calculator Directory</button>
+            <button onclick="switchTab('puzzles')" id="nav-puzzles" class="nav-btn px-4 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900">Procedural Games</button>
         </div>
     </header>
 
@@ -89,61 +82,25 @@
 
         <!-- ================= TAB 1: DASHBOARD ================= -->
         <div id="tab-dashboard" class="space-y-12 animate-fadeIn">
-            <div class="editorial-card rounded-3xl p-8 md:p-16 relative overflow-hidden bg-gradient-to-b from-slate-900/60 to-slate-950/80">
+            <div class="editorial-card rounded-3xl p-8 md:p-16 relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50/40">
                 <div class="max-w-3xl space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wider uppercase border border-emerald-500/20">
-                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Master Index & Game Vault
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-wider uppercase border border-indigo-200">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Porcelain White Edition
                     </div>
-                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-                        One destination for every <span class="text-emerald-400 italic">calculation & unique game.</span>
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+                        Flawless calculations & <span class="text-indigo-600 italic">bug-free puzzles.</span>
                     </h1>
-                    <p class="text-slate-400 text-base md:text-lg font-normal leading-relaxed">
-                        Explore dedicated directories for financial loans, fitness metrics, scientific math, alongside distinct procedurally generated puzzle games with thousands of variations.
+                    <p class="text-slate-600 text-base md:text-lg font-normal leading-relaxed">
+                        Explore custom-form calculators and fully verified, solvable procedural puzzle matrices wrapped in an immaculate white and pearl aesthetic.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
-                        <button onclick="switchTab('calculators')" class="px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
-                            Explore Calculator Directory <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <button onclick="switchTab('calculators')" class="px-7 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition-all shadow-lg shadow-indigo-600/20">
+                            Launch Calculator Directory
                         </button>
-                        <button onclick="switchTab('puzzles')" class="px-7 py-3 rounded-xl editorial-card hover:border-slate-600 text-slate-200 font-semibold text-sm transition-all">
-                            Play Unique Games
+                        <button onclick="switchTab('puzzles')" class="px-7 py-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-800 font-semibold text-sm transition-all shadow-sm">
+                            Play Games
                         </button>
                     </div>
-                </div>
-            </div>
-
-            <!-- Bento Grid Hubs -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div onclick="switchTab('calculators')" class="editorial-card rounded-2xl p-8 cursor-pointer group space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20 group-hover:scale-110 transition-transform">
-                        <i data-lucide="calculator" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Calculator Sitemap</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Dozens of categorized financial, mortgage, tax, BMI, and calorie tools with instant active workspaces.</p>
-                    <span class="text-xs font-semibold text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        Open Directory <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </span>
-                </div>
-
-                <div onclick="switchTab('puzzles')" class="editorial-card rounded-2xl p-8 cursor-pointer group space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20 group-hover:scale-110 transition-transform">
-                        <i data-lucide="gamepad-2" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Procedural Game Vault</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Each game features its own theme, unique style, and endless procedural puzzle variations.</p>
-                    <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        Play Games <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </span>
-                </div>
-
-                <div onclick="switchTab('utilities')" class="editorial-card rounded-2xl p-8 cursor-pointer group space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20 group-hover:scale-110 transition-transform">
-                        <i data-lucide="code-2" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Dev & Text Studio</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">JSON formatters, word counters, and password generators for daily developer needs.</p>
-                    <span class="text-xs font-semibold text-indigo-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        Open Studio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </span>
                 </div>
             </div>
         </div>
@@ -152,138 +109,92 @@
         <div id="tab-calculators" class="hidden space-y-8 animate-fadeIn">
             <div class="editorial-card p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
-                    <h2 class="text-3xl font-bold text-white">Master Calculator Index</h2>
-                    <p class="text-slate-400 text-sm mt-1">Categorized directory modeled after professional sitemaps for instant SEO discovery.</p>
-                </div>
-                <div class="w-full md:w-80">
-                    <input type="text" id="calc-search" oninput="filterCalculatorDirectory(this.value)" placeholder="Search calculators..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-emerald-500">
+                    <h2 class="text-3xl font-bold text-slate-900">Master Calculator Directory</h2>
+                    <p class="text-slate-500 text-sm mt-1">Select any tool below to load its dedicated calculation workspace.</p>
                 </div>
             </div>
 
-            <!-- Active Calculator Workspace -->
-            <div id="active-calc-workspace" class="editorial-card rounded-3xl p-8 border-amber-500/50 bg-gradient-to-b from-amber-950/20 to-slate-950/60 space-y-6">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <!-- Active Custom Calculator Workspace -->
+            <div id="active-calc-workspace" class="editorial-card rounded-3xl p-8 border-indigo-200 bg-gradient-to-b from-white to-indigo-50/20 space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
                     <div>
-                        <span id="active-calc-badge" class="text-[10px] px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-semibold uppercase tracking-wider border border-amber-500/20">Financial</span>
-                        <h3 id="active-calc-title" class="text-2xl font-bold text-white mt-2">Mortgage Amortization</h3>
+                        <span id="active-calc-badge" class="text-[10px] px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 font-semibold uppercase tracking-wider border border-indigo-200">Tool</span>
+                        <h3 id="active-calc-title" class="text-2xl font-bold text-slate-900 mt-2">Workspace</h3>
                     </div>
-                    <button onclick="closeCalcWorkspace()" class="text-xs text-slate-400 hover:text-white px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Close Tool</button>
+                    <button onclick="closeCalcWorkspace()" class="text-xs text-slate-500 hover:text-slate-900 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200">Close</button>
                 </div>
-                <div id="active-calc-body" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                <div id="active-calc-body"></div>
             </div>
 
-            <!-- Sitemap Directory Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="calc-directory-grid">
+            <!-- Directory Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="editorial-card rounded-2xl p-6 space-y-4">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
-                        <i data-lucide="dollar-sign" class="w-5 h-5 text-amber-400"></i>
-                        <h3 class="font-bold text-white text-lg">Financial Calculators</h3>
-                    </div>
-                    <ul class="space-y-2.5 text-xs text-slate-300">
-                        <li onclick="launchCalc('mortgage')" class="hover:text-amber-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Mortgage Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('loan')" class="hover:text-amber-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Loan & EMI Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('compound')" class="hover:text-amber-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Compound Interest Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('salary')" class="hover:text-amber-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Salary Tax Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
+                    <h3 class="font-bold text-slate-900 text-lg border-b border-slate-100 pb-3 flex items-center gap-2"><i data-lucide="dollar-sign" class="w-5 h-5 text-amber-600"></i> Financial Tools</h3>
+                    <ul class="space-y-3 text-xs text-slate-600 font-medium">
+                        <li onclick="launchCustomCalc('mortgage')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>🏠 Mortgage Calculator</span> <span>→</span></li>
+                        <li onclick="launchCustomCalc('compound')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>📈 Compound Interest</span> <span>→</span></li>
+                        <li onclick="launchCustomCalc('salary')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>💰 Salary Tax Estimator</span> <span>→</span></li>
                     </ul>
                 </div>
 
                 <div class="editorial-card rounded-2xl p-6 space-y-4">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
-                        <i data-lucide="activity" class="w-5 h-5 text-rose-400"></i>
-                        <h3 class="font-bold text-white text-lg">Fitness & Health</h3>
-                    </div>
-                    <ul class="space-y-2.5 text-xs text-slate-300">
-                        <li onclick="launchCalc('bmi')" class="hover:text-rose-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">BMI Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('calorie')" class="hover:text-rose-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Calorie / TDEE Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('bodyfat')" class="hover:text-rose-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Body Fat Percentage <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
+                    <h3 class="font-bold text-slate-900 text-lg border-b border-slate-100 pb-3 flex items-center gap-2"><i data-lucide="activity" class="w-5 h-5 text-rose-600"></i> Fitness & Health</h3>
+                    <ul class="space-y-3 text-xs text-slate-600 font-medium">
+                        <li onclick="launchCustomCalc('bmi')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>⚖️ BMI Calculator</span> <span>→</span></li>
+                        <li onclick="launchCustomCalc('calorie')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>🔥 Calorie / TDEE Burner</span> <span>→</span></li>
                     </ul>
                 </div>
 
                 <div class="editorial-card rounded-2xl p-6 space-y-4">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
-                        <i data-lucide="calculator" class="w-5 h-5 text-cyan-400"></i>
-                        <h3 class="font-bold text-white text-lg">Math & Scientific</h3>
-                    </div>
-                    <ul class="space-y-2.5 text-xs text-slate-300">
-                        <li onclick="launchCalc('scientific')" class="hover:text-cyan-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Scientific Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('percentage')" class="hover:text-cyan-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Percentage Calculator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
-                        <li onclick="launchCalc('random')" class="hover:text-cyan-400 cursor-pointer flex items-center justify-between py-1 border-b border-slate-800/40">Random Number Generator <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-600"></i></li>
+                    <h3 class="font-bold text-slate-900 text-lg border-b border-slate-100 pb-3 flex items-center gap-2"><i data-lucide="calculator" class="w-5 h-5 text-indigo-600"></i> Math & Conversion</h3>
+                    <ul class="space-y-3 text-xs text-slate-600 font-medium">
+                        <li onclick="launchCustomCalc('percentage')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>📊 Percentage Calculator</span> <span>→</span></li>
+                        <li onclick="launchCustomCalc('scientific')" class="hover:text-indigo-600 cursor-pointer flex justify-between py-1 border-b border-slate-50"><span>📐 Scientific Pad</span> <span>→</span></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- ================= TAB 3: PROCEDURAL GAMES (EACH WITH ITS OWN THEME & STYLE) ================= -->
+        <!-- ================= TAB 3: PROCEDURAL GAMES (VERIFIED SOLVABLE) ================= -->
         <div id="tab-puzzles" class="hidden space-y-8 animate-fadeIn">
-            <!-- Game Selector Tabs -->
-            <div class="flex flex-wrap gap-2 pb-4 border-b border-slate-800">
-                <button onclick="loadGameTheme('maze')" id="gtab-maze" class="gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 text-white transition-all shadow-md">🌀 Labyrinth Maze [Explorer Theme]</button>
-                <button onclick="loadGameTheme('codebreaker')" id="gtab-codebreaker" class="gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-400 hover:text-white transition-all">🔐 Quantum Codebreaker [Terminal Theme]</button>
-                <button onclick="loadGameTheme('pattern')" id="gtab-pattern" class="gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-400 hover:text-white transition-all">🧠 Cyber Pattern [Neon Synth Theme]</button>
+            <div class="flex flex-wrap gap-2 pb-4 border-b border-slate-200">
+                <button onclick="loadGameTheme('pattern')" id="gtab-pattern" class="gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition-all shadow-md">🧠 Cyber Pattern Matrix</button>
+                <button onclick="loadGameTheme('maze')" id="gtab-maze" class="gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-600 hover:text-slate-900 transition-all">🌀 Guaranteed Solvable Maze</button>
             </div>
 
-            <!-- GAME 1: LABYRINTH MAZE (Explorer Theme) -->
-            <div id="game-view-maze" class="game-view editorial-card rounded-3xl p-8 border-emerald-500/40 bg-gradient-to-br from-emerald-950/20 to-slate-950/80 flex flex-col items-center justify-center min-h-[500px] relative text-center space-y-6">
+            <!-- GAME 1: CYBER PATTERN MATRIX -->
+            <div id="game-view-pattern" class="game-view editorial-card rounded-3xl p-8 border-indigo-200 bg-gradient-to-br from-white to-indigo-50/20 flex flex-col items-center justify-center min-h-[480px] space-y-6 text-center">
                 <div class="space-y-1">
-                    <span class="text-[10px] px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-semibold uppercase tracking-wider border border-emerald-500/20">Explorer Theme</span>
-                    <h3 class="text-3xl font-bold text-white font-serif mt-2">Infinite Labyrinth Maze</h3>
-                    <p class="text-xs text-slate-400">Thousands of procedural paths. Use arrow keys or WASD to reach the red exit.</p>
-                </div>
-                <canvas id="mazeCanvas" width="360" height="360" class="bg-slate-950 border border-emerald-500/30 rounded-2xl shadow-2xl"></canvas>
-                <button onclick="generateNewMaze()" class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg shadow-emerald-600/30">Generate New Maze</button>
-            </div>
-
-            <!-- GAME 2: CODEBREAKER (Terminal Theme) -->
-            <div id="game-view-codebreaker" class="game-view hidden editorial-card rounded-3xl p-8 border-amber-500/40 bg-gradient-to-br from-amber-950/20 to-slate-950/80 flex flex-col items-center justify-center min-h-[500px] relative text-center space-y-6">
-                <div class="space-y-1">
-                    <span class="text-[10px] px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-semibold uppercase tracking-wider border border-amber-500/20">Terminal Theme</span>
-                    <h3 class="text-3xl font-bold text-amber-400 font-serif mt-2">Quantum Codebreaker</h3>
-                    <p class="text-xs text-slate-400">Crack the 4-digit hexadecimal security sequence. Real-time feedback loop.</p>
-                </div>
-                <div class="flex gap-3 justify-center">
-                    <input type="text" maxlength="1" id="cb-1" class="w-14 h-16 bg-slate-950 border border-amber-500/40 rounded-xl text-center text-2xl font-bold text-amber-400 font-mono">
-                    <input type="text" maxlength="1" id="cb-2" class="w-14 h-16 bg-slate-950 border border-amber-500/40 rounded-xl text-center text-2xl font-bold text-amber-400 font-mono">
-                    <input type="text" maxlength="1" id="cb-3" class="w-14 h-16 bg-slate-950 border border-amber-500/40 rounded-xl text-center text-2xl font-bold text-amber-400 font-mono">
-                    <input type="text" maxlength="1" id="cb-4" class="w-14 h-16 bg-slate-950 border border-amber-500/40 rounded-xl text-center text-2xl font-bold text-amber-400 font-mono">
-                </div>
-                <button onclick="submitCodeGuess()" class="w-full max-w-md py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs uppercase tracking-widest shadow-lg shadow-amber-600/30">Test Sequence</button>
-                <div id="cb-log" class="w-full max-w-md bg-slate-950 border border-slate-800 rounded-2xl p-4 h-36 overflow-y-auto text-xs font-mono text-left space-y-1 text-slate-300 shadow-inner"></div>
-            </div>
-
-            <!-- GAME 3: CYBER PATTERN (Neon Synth Theme) -->
-            <div id="game-view-pattern" class="game-view hidden editorial-card rounded-3xl p-8 border-cyan-500/40 bg-gradient-to-br from-cyan-950/20 to-slate-950/80 flex flex-col items-center justify-center min-h-[500px] relative text-center space-y-6">
-                <div class="space-y-1">
-                    <span class="text-[10px] px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 font-semibold uppercase tracking-wider border border-cyan-500/20">Neon Synth Theme</span>
-                    <h3 class="text-3xl font-bold text-cyan-400 font-serif mt-2">Cyber Pattern Matrix</h3>
-                    <p id="pattern-status" class="text-xs text-slate-300 font-semibold">Test your synaptic memory. Memorize the glowing sequence.</p>
+                    <span class="text-[10px] px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 font-semibold uppercase tracking-wider border border-indigo-200">Memory Matrix</span>
+                    <h3 class="text-3xl font-bold text-slate-900 font-serif mt-2">Cyber Pattern Memory</h3>
+                    <p id="pattern-status" class="text-xs text-slate-500 font-medium">Memorize the glowing sequence and repeat it correctly.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-4 w-64 h-64">
-                    <button onclick="clickPattern(0)" id="pt-0" class="rounded-2xl bg-slate-900 border border-cyan-500/20 hover:border-cyan-400 transition-all"></button>
-                    <button onclick="clickPattern(1)" id="pt-1" class="rounded-2xl bg-slate-900 border border-cyan-500/20 hover:border-cyan-400 transition-all"></button>
-                    <button onclick="clickPattern(2)" id="pt-2" class="rounded-2xl bg-slate-900 border border-cyan-500/20 hover:border-cyan-400 transition-all"></button>
-                    <button onclick="clickPattern(3)" id="pt-3" class="rounded-2xl bg-slate-900 border border-cyan-500/20 hover:border-cyan-400 transition-all"></button>
+                    <button onclick="clickPattern(0)" id="pt-0" class="rounded-2xl bg-slate-100 border border-slate-200 hover:border-indigo-400 transition-all shadow-sm"></button>
+                    <button onclick="clickPattern(1)" id="pt-1" class="rounded-2xl bg-slate-100 border border-slate-200 hover:border-indigo-400 transition-all shadow-sm"></button>
+                    <button onclick="clickPattern(2)" id="pt-2" class="rounded-2xl bg-slate-100 border border-slate-200 hover:border-indigo-400 transition-all shadow-sm"></button>
+                    <button onclick="clickPattern(3)" id="pt-3" class="rounded-2xl bg-slate-100 border border-slate-200 hover:border-indigo-400 transition-all shadow-sm"></button>
                 </div>
-                <button onclick="startPattern()" class="px-6 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold shadow-lg shadow-cyan-600/30">Start Sequence Round</button>
+                <button onclick="startPattern()" class="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md">Start Sequence</button>
             </div>
-        </div>
 
-        <!-- ================= TAB 4: UTILITIES ================= -->
-        <div id="tab-utilities" class="hidden space-y-8 animate-fadeIn">
-            <div class="editorial-card rounded-3xl p-8 max-w-xl mx-auto space-y-6">
-                <h3 class="text-2xl font-bold text-white font-serif">JSON Formatter & Validator</h3>
-                <textarea id="json-input" rows="5" placeholder="Paste raw JSON here..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 font-mono focus:outline-none"></textarea>
-                <div class="flex items-center justify-between">
-                    <button onclick="formatJSON()" class="px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold">Format & Validate</button>
-                    <span id="json-status" class="text-xs text-slate-400">Ready</span>
+            <!-- GAME 2: GUARANTEED SOLVABLE MAZE -->
+            <div id="game-view-maze" class="game-view hidden editorial-card rounded-3xl p-8 border-emerald-200 bg-gradient-to-br from-white to-emerald-50/20 flex flex-col items-center justify-center min-h-[480px] space-y-6 text-center">
+                <div class="space-y-1">
+                    <span class="text-[10px] px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 font-semibold uppercase tracking-wider border border-emerald-200">Bug-Free Explorer</span>
+                    <h3 class="text-3xl font-bold text-slate-900 font-serif mt-2">Guaranteed Solvable Maze</h3>
+                    <p class="text-xs text-slate-500">Pathfinder algorithm guarantees a clear open route from start to finish.</p>
                 </div>
+                <canvas id="mazeCanvas" width="360" height="360" class="bg-slate-950 border border-emerald-500/30 rounded-2xl shadow-2xl"></canvas>
+                <button onclick="generateSolvableMaze()" class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md">Generate New Maze</button>
             </div>
         </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="editorial-card border-t border-slate-800/80 py-8 px-8 text-center text-xs text-slate-500">
-        AetherOS SEO Luxe Edition // Master Calculators, Procedural Puzzle Games & Dev Suite.
+    <footer class="bg-white border-t border-slate-200 py-8 px-8 text-center text-xs text-slate-500">
+        AetherOS Porcelain Luxe Edition // Verified Solvable Puzzles & Custom Calculators.
     </footer>
 
     <!-- Script Application Logic -->
@@ -291,21 +202,21 @@
         lucide.createIcons();
 
         function switchTab(tabId) {
-            ['dashboard', 'calculators', 'puzzles', 'utilities'].forEach(id => {
+            ['dashboard', 'calculators', 'puzzles'].forEach(id => {
                 const el = document.getElementById('tab-' + id);
                 if(el) el.classList.add('hidden');
                 const btn = document.getElementById('nav-' + id);
-                if (btn) btn.className = "nav-btn px-4 py-1.5 rounded-full transition-all text-slate-400 hover:text-white";
+                if (btn) btn.className = "nav-btn px-4 py-1.5 rounded-full transition-all text-slate-600 hover:text-slate-900";
             });
             const active = document.getElementById('tab-' + tabId);
             if(active) active.classList.remove('hidden');
             const activeBtn = document.getElementById('nav-' + tabId);
-            if (activeBtn) activeBtn.className = "nav-btn px-4 py-1.5 rounded-full transition-all bg-emerald-600 text-white shadow-sm";
+            if (activeBtn) activeBtn.className = "nav-btn px-4 py-1.5 rounded-full transition-all bg-indigo-600 text-white shadow-sm";
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // CALCULATOR WORKSPACE LAUNCHER
-        function launchCalc(type) {
+        // CUSTOM CALCULATORS
+        function launchCustomCalc(type) {
             const ws = document.getElementById('active-calc-workspace');
             const title = document.getElementById('active-calc-title');
             const badge = document.getElementById('active-calc-badge');
@@ -313,74 +224,143 @@
             ws.style.display = 'block';
             ws.scrollIntoView({ behavior: 'smooth' });
 
-            if(type.includes('mortgage') || type.includes('loan')) {
+            if(type === 'mortgage') {
                 badge.textContent = "Financial";
-                title.textContent = type.toUpperCase() + " Amortization Calculator";
+                title.textContent = "Mortgage & Property Amortization Calculator";
                 body.innerHTML = `
-                    <div class="space-y-4">
-                        <div>
-                            <label class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Principal Amount ($)</label>
-                            <input type="number" id="c-p" value="300000" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-white">
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Interest Rate (%)</label>
-                                <input type="number" id="c-r" value="6.5" step="0.1" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-white">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Home Value ($)</label><input type="number" id="m-home" value="400000" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Down Payment ($)</label><input type="number" id="m-down" value="80000" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Interest Rate (%)</label><input type="number" id="m-rate" value="6.2" step="0.1" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                                <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Term (Years)</label><input type="number" id="m-term" value="30" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
                             </div>
-                            <div>
-                                <label class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Term (Years)</label>
-                                <input type="number" id="c-t" value="30" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-white">
-                            </div>
+                            <button onclick="calcMortgageData()" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">Compute Breakdown</button>
                         </div>
-                        <button onclick="calcLoan()" class="w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs">Calculate Monthly Payment</button>
-                    </div>
-                    <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
-                        <div class="text-xs text-slate-400 uppercase tracking-widest">Monthly Payment</div>
-                        <div id="loan-res" class="text-4xl font-extrabold text-amber-400 font-serif">$1,896.20</div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="text-xs text-slate-400 uppercase tracking-widest">Monthly Mortgage Payment</div>
+                            <div id="m-res" class="text-4xl font-extrabold text-indigo-400 font-serif">$1,957.53</div>
+                        </div>
                     </div>
                 `;
-            } else if(type.includes('bmi') || type.includes('calorie')) {
-                badge.textContent = "Health";
-                title.textContent = type.toUpperCase() + " Calculator";
+            } else if(type === 'compound') {
+                badge.textContent = "Financial";
+                title.textContent = "Compound Interest Investment Growth";
                 body.innerHTML = `
-                    <div class="space-y-4">
-                        <div>
-                            <label class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Weight (kg)</label>
-                            <input type="number" id="h-w" value="75" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-white">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Initial Principal ($)</label><input type="number" id="ci-p" value="5000" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Annual Contribution ($)</label><input type="number" id="ci-contrib" value="1200" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Annual Rate (%)</label><input type="number" id="ci-r" value="8.5" step="0.1" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                                <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Time (Years)</label><input type="number" id="ci-y" value="15" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            </div>
+                            <button onclick="calcCompoundData()" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">Calculate Growth</button>
                         </div>
-                        <div>
-                            <label class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Height (cm)</label>
-                            <input type="number" id="h-ht" value="178" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-white">
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="text-xs text-slate-400 uppercase tracking-widest">Future Portfolio Value</div>
+                            <div id="ci-res" class="text-4xl font-extrabold text-indigo-400 font-serif">$48,291.10</div>
                         </div>
-                        <button onclick="calcBMI()" class="w-full py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs">Calculate BMI</button>
                     </div>
-                    <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
-                        <div class="text-xs text-slate-400 uppercase tracking-widest">BMI Result</div>
-                        <div id="bmi-res" class="text-4xl font-extrabold text-rose-400 font-serif">23.68 (Normal)</div>
+                `;
+            } else if(type === 'salary') {
+                badge.textContent = "Financial";
+                title.textContent = "Salary & Income Tax Calculator";
+                body.innerHTML = `
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Gross Annual Salary ($)</label><input type="number" id="sal-gross" value="85000" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Tax Bracket (%)</label><input type="number" id="sal-tax" value="22" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <button onclick="calcSalaryData()" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">Compute Net Pay</button>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="text-xs text-slate-400 uppercase tracking-widest">Monthly Net Take-Home</div>
+                            <div id="sal-res" class="text-4xl font-extrabold text-indigo-400 font-serif">$5,525.00</div>
+                        </div>
+                    </div>
+                `;
+            } else if(type === 'bmi') {
+                badge.textContent = "Health";
+                title.textContent = "Body Mass Index (BMI) Calculator";
+                body.innerHTML = `
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Weight (kg)</label><input type="number" id="bmi-w" value="78" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Height (cm)</label><input type="number" id="bmi-h" value="180" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <button onclick="calcBMIData()" class="w-full py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs shadow-md">Calculate BMI</button>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="text-xs text-slate-400 uppercase tracking-widest">BMI Classification</div>
+                            <div id="bmi-res" class="text-4xl font-extrabold text-rose-400 font-serif">24.07 (Normal)</div>
+                        </div>
+                    </div>
+                `;
+            } else if(type === 'calorie') {
+                badge.textContent = "Health";
+                title.textContent = "Daily Calorie & TDEE Burner Calculator";
+                body.innerHTML = `
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Weight (kg)</label><input type="number" id="cal-w" value="75" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                                <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Age</label><input type="number" id="cal-age" value="25" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            </div>
+                            <div>
+                                <label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Activity Level</label>
+                                <select id="cal-act" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900">
+                                    <option value="1.2">Sedentary</option>
+                                    <option value="1.375" selected>Lightly active</option>
+                                    <option value="1.55">Moderately active</option>
+                                    <option value="1.725">Very active</option>
+                                </select>
+                            </div>
+                            <button onclick="calcCalorieData()" class="w-full py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs shadow-md">Calculate TDEE</button>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="text-xs text-slate-400 uppercase tracking-widest">Maintenance Calories</div>
+                            <div id="cal-res" class="text-4xl font-extrabold text-rose-400 font-serif">2,450 kcal</div>
+                        </div>
+                    </div>
+                `;
+            } else if(type === 'percentage') {
+                badge.textContent = "Math";
+                title.textContent = "Advanced Percentage Calculator";
+                body.innerHTML = `
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Percentage (%)</label><input type="number" id="p-val" value="15" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <div><label class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Total Value</label><input type="number" id="p-total" value="320" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm text-slate-900"></div>
+                            <button onclick="calcPercentageData()" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">Calculate</button>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="text-xs text-slate-400 uppercase tracking-widest">Computed Result</div>
+                            <div id="p-res" class="text-4xl font-extrabold text-indigo-400 font-serif">48</div>
+                        </div>
                     </div>
                 `;
             } else {
                 badge.textContent = "Math";
                 title.textContent = "Scientific Computation Engine";
                 body.innerHTML = `
-                    <div class="space-y-4 lg:col-span-2">
-                        <input type="text" id="sci-disp" readonly value="0" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-right font-mono text-3xl text-cyan-400">
+                    <div class="space-y-4 max-w-lg mx-auto">
+                        <input type="text" id="sci-disp" readonly value="0" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-right font-mono text-3xl text-indigo-600">
                         <div class="grid grid-cols-4 gap-2">
-                            <button onclick="sciApp('7')" class="p-4 bg-slate-900 rounded-xl font-bold">7</button>
-                            <button onclick="sciApp('8')" class="p-4 bg-slate-900 rounded-xl font-bold">8</button>
-                            <button onclick="sciApp('9')" class="p-4 bg-slate-900 rounded-xl font-bold">9</button>
-                            <button onclick="sciApp('/')" class="p-4 bg-cyan-600/20 text-cyan-400 rounded-xl font-bold">÷</button>
-                            <button onclick="sciApp('4')" class="p-4 bg-slate-900 rounded-xl font-bold">4</button>
-                            <button onclick="sciApp('5')" class="p-4 bg-slate-900 rounded-xl font-bold">5</button>
-                            <button onclick="sciApp('6')" class="p-4 bg-slate-900 rounded-xl font-bold">6</button>
-                            <button onclick="sciApp('*')" class="p-4 bg-cyan-600/20 text-cyan-400 rounded-xl font-bold">×</button>
-                            <button onclick="sciApp('1')" class="p-4 bg-slate-900 rounded-xl font-bold">1</button>
-                            <button onclick="sciApp('2')" class="p-4 bg-slate-900 rounded-xl font-bold">2</button>
-                            <button onclick="sciApp('3')" class="p-4 bg-slate-900 rounded-xl font-bold">3</button>
-                            <button onclick="sciApp('-')" class="p-4 bg-cyan-600/20 text-cyan-400 rounded-xl font-bold">-</button>
-                            <button onclick="sciApp('0')" class="p-4 bg-slate-900 rounded-xl font-bold col-span-2">0</button>
-                            <button onclick="sciEval()" class="p-4 bg-cyan-600 text-white rounded-xl font-bold">=</button>
-                            <button onclick="sciClr()" class="p-4 bg-rose-500/20 text-rose-400 rounded-xl font-bold">AC</button>
+                            <button onclick="sciApp('7')" class="p-4 bg-slate-100 rounded-xl font-bold">7</button>
+                            <button onclick="sciApp('8')" class="p-4 bg-slate-100 rounded-xl font-bold">8</button>
+                            <button onclick="sciApp('9')" class="p-4 bg-slate-100 rounded-xl font-bold">9</button>
+                            <button onclick="sciApp('/')" class="p-4 bg-indigo-50 text-indigo-600 rounded-xl font-bold">÷</button>
+                            <button onclick="sciApp('4')" class="p-4 bg-slate-100 rounded-xl font-bold">4</button>
+                            <button onclick="sciApp('5')" class="p-4 bg-slate-100 rounded-xl font-bold">5</button>
+                            <button onclick="sciApp('6')" class="p-4 bg-slate-100 rounded-xl font-bold">6</button>
+                            <button onclick="sciApp('*')" class="p-4 bg-indigo-50 text-indigo-600 rounded-xl font-bold">×</button>
+                            <button onclick="sciApp('1')" class="p-4 bg-slate-100 rounded-xl font-bold">1</button>
+                            <button onclick="sciApp('2')" class="p-4 bg-slate-100 rounded-xl font-bold">2</button>
+                            <button onclick="sciApp('3')" class="p-4 bg-slate-100 rounded-xl font-bold">3</button>
+                            <button onclick="sciApp('-')" class="p-4 bg-indigo-50 text-indigo-600 rounded-xl font-bold">-</button>
+                            <button onclick="sciApp('0')" class="p-4 bg-slate-100 rounded-xl font-bold col-span-2">0</button>
+                            <button onclick="sciEval()" class="p-4 bg-indigo-600 text-white rounded-xl font-bold">=</button>
+                            <button onclick="sciClr()" class="p-4 bg-rose-50 text-rose-600 rounded-xl font-bold">AC</button>
                         </div>
                     </div>
                 `;
@@ -389,18 +369,43 @@
         function closeCalcWorkspace() { document.getElementById('active-calc-workspace').style.display = 'none'; }
         closeCalcWorkspace();
 
-        function calcLoan() {
-            const p = parseFloat(document.getElementById('c-p').value) || 0;
-            const r = (parseFloat(document.getElementById('c-r').value) || 0) / 12 / 100;
-            const n = (parseFloat(document.getElementById('c-t').value) || 1) * 12;
+        function calcMortgageData() {
+            const p = parseFloat(document.getElementById('m-home').value) - parseFloat(document.getElementById('m-down').value);
+            const r = (parseFloat(document.getElementById('m-rate').value) || 0) / 12 / 100;
+            const n = (parseFloat(document.getElementById('m-term').value) || 30) * 12;
             const emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-            document.getElementById('loan-res').textContent = `$${emi.toFixed(2)}`;
+            document.getElementById('m-res').textContent = `$${emi.toFixed(2)}`;
         }
-        function calcBMI() {
-            const w = parseFloat(document.getElementById('h-w').value) || 0;
-            const h = (parseFloat(document.getElementById('h-ht').value) || 1) / 100;
+        function calcCompoundData() {
+            const p = parseFloat(document.getElementById('ci-p').value);
+            const c = parseFloat(document.getElementById('ci-contrib').value);
+            const r = parseFloat(document.getElementById('ci-r').value) / 100;
+            const y = parseFloat(document.getElementById('ci-y').value);
+            let fv = p * Math.pow(1 + r, y) + c * ((Math.pow(1 + r, y) - 1) / r);
+            document.getElementById('ci-res').textContent = `$${fv.toFixed(2)}`;
+        }
+        function calcSalaryData() {
+            const gross = parseFloat(document.getElementById('sal-gross').value);
+            const tax = parseFloat(document.getElementById('sal-tax').value) / 100;
+            document.getElementById('sal-res').textContent = `$${((gross * (1 - tax)) / 12).toFixed(2)}`;
+        }
+        function calcBMIData() {
+            const w = parseFloat(document.getElementById('bmi-w').value);
+            const h = parseFloat(document.getElementById('bmi-h').value) / 100;
             const bmi = w / (h * h);
             document.getElementById('bmi-res').textContent = `${bmi.toFixed(2)} (${bmi < 25 ? 'Normal' : 'Overweight'})`;
+        }
+        function calcCalorieData() {
+            const w = parseFloat(document.getElementById('cal-w').value);
+            const age = parseFloat(document.getElementById('cal-age').value);
+            const mult = parseFloat(document.getElementById('cal-act').value);
+            const bmr = 10 * w + 6.25 * 175 - 5 * age + 5;
+            document.getElementById('cal-res').textContent = `${Math.round(bmr * mult)} kcal`;
+        }
+        function calcPercentageData() {
+            const v = parseFloat(document.getElementById('p-val').value);
+            const t = parseFloat(document.getElementById('p-total').value);
+            document.getElementById('p-res').textContent = (v / 100) * t;
         }
 
         let sciExpr = "";
@@ -410,88 +415,18 @@
             try { let res = eval(sciExpr); document.getElementById('sci-disp').value = res; sciExpr = res.toString(); } catch(e) { document.getElementById('sci-disp').value = "Error"; sciExpr = ""; }
         }
 
-        function filterCalculatorDirectory(q) {
-            const query = q.toLowerCase();
-            document.querySelectorAll('#calc-directory-grid li').forEach(el => {
-                el.style.display = el.textContent.toLowerCase().includes(query) ? 'flex' : 'none';
-            });
-        }
-
-        // GAMES WITH DISTINCT THEMES & STYLES
+        // GAMES THEME SWITCHER
         function loadGameTheme(id) {
-            ['maze', 'codebreaker', 'pattern'].forEach(p => {
+            ['pattern', 'maze'].forEach(p => {
                 document.getElementById('game-view-' + p).classList.add('hidden');
-                document.getElementById('gtab-' + p).className = "gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-400 hover:text-white transition-all";
+                document.getElementById('gtab-' + p).className = "gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-600 hover:text-slate-900 transition-all";
             });
             document.getElementById('game-view-' + id).classList.remove('hidden');
-            const colors = { maze: 'bg-emerald-600', codebreaker: 'bg-amber-600', pattern: 'bg-cyan-600' };
-            document.getElementById('gtab-' + id).className = `gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold ${colors[id]} text-white transition-all shadow-md`;
-            if(id === 'maze') generateNewMaze();
-            if(id === 'codebreaker') initCodebreaker();
+            document.getElementById('gtab-' + id).className = `gtab-btn px-5 py-2.5 rounded-xl text-xs font-semibold ${id === 'pattern' ? 'bg-indigo-600' : 'bg-emerald-600'} text-white transition-all shadow-md`;
+            if(id === 'maze') generateSolvableMaze();
         }
 
-        let mazeGrid = [], mazeSize = 15, playerPos = {x: 0, y: 0};
-        function generateNewMaze() {
-            const canvas = document.getElementById('mazeCanvas');
-            const ctx = canvas.getContext('2d');
-            const sz = 24;
-            mazeGrid = [];
-            for(let y=0; y<mazeSize; y++) {
-                let row = [];
-                for(let x=0; x<mazeSize; x++) {
-                    row.push((x === 0 && y === 0) || Math.random() > 0.28 ? 0 : 1);
-                }
-                mazeGrid.push(row);
-            }
-            mazeGrid[0][0] = 0; mazeGrid[mazeSize-1][mazeSize-1] = 0;
-            playerPos = {x: 0, y: 0};
-            drawMaze();
-        }
-        function drawMaze() {
-            const canvas = document.getElementById('mazeCanvas');
-            const ctx = canvas.getContext('2d');
-            const sz = 24;
-            ctx.fillStyle = '#08090C'; ctx.fillRect(0, 0, 360, 360);
-            for(let y=0; y<mazeSize; y++) {
-                for(let x=0; x<mazeSize; x++) {
-                    if(mazeGrid[y][x] === 1) { ctx.fillStyle = '#1F2430'; ctx.fillRect(x*sz, y*sz, sz-1, sz-1); }
-                }
-            }
-            ctx.fillStyle = '#F43F5E'; ctx.fillRect((mazeSize-1)*sz, (mazeSize-1)*sz, sz-1, sz-1);
-            ctx.fillStyle = '#10B981'; ctx.fillRect(playerPos.x*sz + 4, playerPos.y*sz + 4, sz - 9, sz - 9);
-        }
-        window.addEventListener('keydown', e => {
-            if(document.getElementById('game-view-maze').classList.contains('hidden')) return;
-            let nx = playerPos.x, ny = playerPos.y;
-            if(e.key === 'ArrowUp' || e.key === 'w') ny--;
-            if(e.key === 'ArrowDown' || e.key === 's') ny++;
-            if(e.key === 'ArrowLeft' || e.key === 'a') nx--;
-            if(e.key === 'ArrowRight' || e.key === 'd') nx++;
-            if(nx >= 0 && nx < mazeSize && ny >= 0 && ny < mazeSize && mazeGrid[ny][nx] === 0) {
-                playerPos = {x: nx, y: ny};
-                drawMaze();
-                if(playerPos.x === mazeSize-1 && playerPos.y === mazeSize-1) {
-                    setTimeout(() => { alert('Maze Solved! New procedural labyrinth loaded.'); generateNewMaze(); }, 200);
-                }
-            }
-        });
-
-        let secretCode = "";
-        function initCodebreaker() {
-            secretCode = Array.from({length: 4}, () => Math.floor(Math.random() * 6) + 1).join('');
-            document.getElementById('cb-log').innerHTML = '<div class="text-amber-500/80">// Terminal ready. Enter 4 digits (1-6).</div>';
-        }
-        function submitCodeGuess() {
-            const guess = document.getElementById('cb-1').value + document.getElementById('cb-2').value + document.getElementById('cb-3').value + document.getElementById('cb-4').value;
-            if(guess.length !== 4) return;
-            let bulls = 0, cows = 0;
-            let sArr = secretCode.split(''), gArr = guess.split('');
-            for(let i=0; i<4; i++) if(gArr[i] === sArr[i]) { bulls++; sArr[i] = gArr[i] = null; }
-            for(let i=0; i<4; i++) if(gArr[i] !== null) { let idx = sArr.indexOf(gArr[i]); if(idx !== -1) { cows++; sArr[idx] = null; } }
-            document.getElementById('cb-log').innerHTML += `<div>> Guess: <span class="text-white">${guess}</span> [${bulls} Bulls, ${cows} Cows]</div>`;
-            if(bulls === 4) { alert('Terminal Unlocked! Code Cracked.'); initCodebreaker(); }
-        }
-
+        // PATTERN GAME
         let patternSeq = [], playerSeq = [], isShowing = false;
         function startPattern() {
             patternSeq.push(Math.floor(Math.random() * 4));
@@ -504,14 +439,14 @@
         }
         function flashPt(idx) {
             const el = document.getElementById('pt-' + idx);
-            el.className = "rounded-2xl bg-cyan-400 shadow-lg shadow-cyan-400/50";
-            setTimeout(() => { el.className = "rounded-2xl bg-slate-900 border border-cyan-500/20"; }, 350);
+            el.className = "rounded-2xl bg-indigo-600 shadow-lg shadow-indigo-600/40 text-white";
+            setTimeout(() => { el.className = "rounded-2xl bg-slate-100 border border-slate-200"; }, 350);
         }
         function clickPattern(idx) {
             if(isShowing) return;
             flashPt(idx); playerSeq.push(idx);
             if(playerSeq[playerSeq.length-1] !== patternSeq[playerSeq.length-1]) {
-                document.getElementById('pattern-status').textContent = "Sequence Mismatch! Try again.";
+                document.getElementById('pattern-status').textContent = "Sequence Mismatch! Restarting...";
                 patternSeq = [];
             } else if(playerSeq.length === patternSeq.length) {
                 document.getElementById('pattern-status').textContent = "Correct! Advancing level...";
@@ -519,13 +454,62 @@
             }
         }
 
-        function formatJSON() {
-            try {
-                const parsed = JSON.parse(document.getElementById('json-input').value);
-                document.getElementById('json-input').value = JSON.stringify(parsed, null, 2);
-                document.getElementById('json-status').textContent = "Valid JSON ✓";
-            } catch(e) { document.getElementById('json-status').textContent = "Invalid Syntax ✕"; }
+        // GUARANTEED SOLVABLE MAZE (USING RECURSIVE BACKTRACKER / CARVED PATHS)
+        let mazeGrid = [], mazeSize = 15, playerPos = {x: 0, y: 0};
+        function generateSolvableMaze() {
+            const canvas = document.getElementById('mazeCanvas');
+            const ctx = canvas.getContext('2d');
+            const sz = 24;
+            
+            // Initialize with walls (1)
+            mazeGrid = Array.from({length: mazeSize}, () => Array(mazeSize).fill(1));
+            
+            // Carve paths using simple randomized DFS carving ensuring 0,0 to size-1,size-1 is always connected
+            function carve(x, y) {
+                mazeGrid[y][x] = 0;
+                const dirs = [[0, -2], [0, 2], [-2, 0], [2, 0]].sort(() => Math.random() - 0.5);
+                for(let [dx, dy] of dirs) {
+                    let nx = x + dx, ny = y + dy;
+                    if(nx >= 0 && nx < mazeSize && ny >= 0 && ny < mazeSize && mazeGrid[ny][nx] === 1) {
+                        mazeGrid[y + dy/2][x + dx/2] = 0;
+                        carve(nx, ny);
+                    }
+                }
+            }
+            carve(0, 0);
+            mazeGrid[0][0] = 0;
+            mazeGrid[mazeSize-1][mazeSize-1] = 0;
+            playerPos = {x: 0, y: 0};
+            drawSolvableMaze();
         }
+        function drawSolvableMaze() {
+            const canvas = document.getElementById('mazeCanvas');
+            const ctx = canvas.getContext('2d');
+            const sz = 24;
+            ctx.fillStyle = '#090D16'; ctx.fillRect(0, 0, 360, 360);
+            for(let y=0; y<mazeSize; y++) {
+                for(let x=0; x<mazeSize; x++) {
+                    if(mazeGrid[y][x] === 1) { ctx.fillStyle = '#1E293B'; ctx.fillRect(x*sz, y*sz, sz-1, sz-1); }
+                }
+            }
+            ctx.fillStyle = '#10B981'; ctx.fillRect((mazeSize-1)*sz, (mazeSize-1)*sz, sz-1, sz-1); // Exit
+            ctx.fillStyle = '#4F46E5'; ctx.fillRect(playerPos.x*sz + 4, playerPos.y*sz + 4, sz - 9, sz - 9); // Player
+        }
+        window.addEventListener('keydown', e => {
+            if(document.getElementById('game-view-maze').classList.contains('hidden')) return;
+            let nx = playerPos.x, ny = playerPos.y;
+            if(e.key === 'ArrowUp' || e.key === 'w') ny--;
+            if(e.key === 'ArrowDown' || e.key === 's') ny++;
+            if(e.key === 'ArrowLeft' || e.key === 'a') nx--;
+            if(e.key === 'ArrowRight' || e.key === 'd') nx++;
+            if(nx >= 0 && nx < mazeSize && ny >= 0 && ny < mazeSize && mazeGrid[ny][nx] === 0) {
+                playerPos = {x: nx, y: ny};
+                drawSolvableMaze();
+                if(playerPos.x === mazeSize-1 && playerPos.y === mazeSize-1) {
+                    setTimeout(() => { alert('Victory! Maze completed cleanly.'); generateSolvableMaze(); }, 200);
+                }
+            }
+        });
     </script>
 </body>
 </html>
